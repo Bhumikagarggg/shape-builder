@@ -58,7 +58,7 @@ jobs:
           make build-preview
 
           # Prevent indexing
-          cat > public/robots.txt <<'EOF'
+          cat > site/public/robots.txt <<'EOF'
           User-agent: *
           Disallow: /
           EOF
