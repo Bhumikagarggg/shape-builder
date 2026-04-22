@@ -8,8 +8,7 @@ const pathPrefix =
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: process.env.PATH_PREFIX || "",
-  ...(pathPrefix != null ? { pathPrefix } : {}),
+  pathPrefix,
   siteMetadata: {
     title: "Meshery Shape Builder",
     siteUrl: "https://shapes.meshery.io",
