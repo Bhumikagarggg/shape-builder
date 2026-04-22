@@ -1,8 +1,15 @@
+const rawPrefix = process.env.PATH_PREFIX;
+const pathPrefix =
+  rawPrefix && String(rawPrefix).trim().length
+    ? `/${String(rawPrefix).replace(/^\/+|\/+$/g, "")}`
+    : undefined;
+
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
   pathPrefix: process.env.PATH_PREFIX || "",
+  ...(pathPrefix != null ? { pathPrefix } : {}),
   siteMetadata: {
     title: "Meshery Shape Builder",
     siteUrl: "https://shapes.meshery.io",
