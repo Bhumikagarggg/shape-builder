@@ -259,12 +259,12 @@ const ShapeBuilder = () => {
               onChange={handlePresetChange}
               displayEmpty
               aria-label="Scale preset"
-              sx={{
-                color: "#fff",
+              sx={(theme) => ({
+                color: theme.palette.mode === "dark" ? "#fff" : "inherit",
                 "& .MuiSelect-icon": {
-                  color: "#fff"
-                }
-              }}
+                  color: theme.palette.mode === "dark" ? "#fff" : "inherit",
+                },
+              })}
             >
               {SCALE_PRESETS.map((preset) => (
                 <MenuItem key={preset} value={preset}>
