@@ -2,6 +2,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  pathPrefix: process.env.PATH_PREFIX || "",
   siteMetadata: {
     title: "Meshery Shape Builder",
     siteUrl: "https://shapes.meshery.io",
